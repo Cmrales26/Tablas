@@ -27,7 +27,7 @@ let usuario = [
         genero: "Femenino",
     },
     {
-        id: 10020456,
+        id: 1002045,
         nombre: "Sharith",
         apellido: "Blanco",
         usuarios: "Sblanco10",
@@ -93,7 +93,8 @@ const Agregar = () => {
             genero: genero.value
         }
         usuario.push(nuevo);
-        Listar()
+        Listar();
+        limpiar();
     }else{
         Swal.fire({
             icon: 'error',
@@ -101,9 +102,9 @@ const Agregar = () => {
             text: `El numero de identificacion ${id.value} ya se encuentra registrado`,
             confirmButtonColor: "#6C4784"
             
-        })
+        });
+        id.value = "";
     }
-
 }
 
 const validarExistencia = () => {
@@ -113,4 +114,15 @@ const validarExistencia = () => {
         }
     }        
     return false;
+}
+
+const limpiar = () =>{
+    id.value = "";
+    nombre.value = "";
+    apellido.value = "";
+    user.value = "";
+    direccion.value = "";
+    telefono.value = "";
+    edad.value = "";
+    pais.value = "Seleccione un país";
 }
