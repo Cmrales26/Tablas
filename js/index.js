@@ -131,29 +131,29 @@ const limpiar = () => {
     pais.value = "Seleccione un país";
 }
 
-const select_faltantes = () =>{
-    if(id.value == ""){
+const select_faltantes = () => {
+    if (id.value == "") {
         id.classList.add("form-alert")
     }
-    if(nombre.value == ""){
+    if (nombre.value == "") {
         nombre.classList.add("form-alert")
     }
-    if(apellido.value == ""){
+    if (apellido.value == "") {
         apellido.classList.add("form-alert")
     }
-    if(user.value == ""){
+    if (user.value == "") {
         user.classList.add("form-alert")
     }
-    if(direccion.value == ""){
+    if (direccion.value == "") {
         direccion.classList.add("form-alert")
     }
-    if(telefono.value == ""){
+    if (telefono.value == "") {
         telefono.classList.add("form-alert")
     }
-    if(edad.value == ""){
+    if (edad.value == "") {
         edad.classList.add("form-alert")
     }
-    if(pais.value == "Seleccione un país"){
+    if (pais.value == "Seleccione un país") {
         pais.classList.add("form-alert")
     }
 }
@@ -162,7 +162,7 @@ let form = document.querySelector(".lables");
 
 form.addEventListener('click', (event) => {
     remove_select()
-}) 
+})
 
 const remove_select = () => {
     id.classList.remove("form-alert")
