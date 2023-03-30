@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/index.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="columna row1">
+            <h1>USUARIOS REGISTRADOS</h1>
+            <div class="contenerdor-tablas">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Dirección</th>
+                            <th scope="col">Teléfono</th>
+                            <th scope="col">Edad</th>
+                            <th scope="col">país</th>
+                            <th scope="col">Genero</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabla-usuario">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="columna row2">
+            <div class="contenedor-registro">
+                <h1>Registro</h1>
+                <div class="form">
+                    <div class="lables">
+                        <label for="Id" class="form-label">No. Documento</label>
+                        <input type="number" class="form-control" id="Id" placeholder="No. Documento">
+
+                        <label for="Nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="Nombre" placeholder="Nombre">
+
+                        <label for="Apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="Apellido" placeholder="Apellido">
+
+                        <label for="User" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="User" placeholder="Usuario">
+
+                        <label for="Direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="Direccion" placeholder="Dirección">
+
+                        <label for="Telefono" class="form-label">Teléfono</label>
+                        <input type="number" class="form-control" id="Telefono" placeholder="Teléfono">
+
+                        <label for="Edad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" id="Edad" placeholder="Edad">
+                    </div>
+
+                    <div class="select-pais">
+
+                        <label for="Pais" class="form-label">País</label>
+                        <select class="form-select" aria-label="Default select example" id="Pais">
+                            <option selected>Seleccione un país</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Brasil">Brasil</option>
+                        </select>
+                    </div>
+
+                    <label for="Genero" class="form-label">Genero</label>
+                    <form id="Selector-genero">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Genero" id="Genero" value="Masculino">
+                            <label class="form-check-label" for="Genero">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="Genero" id="Genero" value="Femenino">
+                            <label class="form-check-label" for="Genero">Femenino</label>
+                        </div>
+                    </form>
+                    <div class="botones mt-4">
+                        <button type="button" class="btn btn-primary" onclick="Agregar()">Agregar</button>
+                        <button type="button" class="btn btn-secondary" onclick="Listar()">Listar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="creado">
+            <p>creado y diseñado por: <a href="https://github.com/Cmrales26/" target="_blank">Cmrales26</a></p>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
