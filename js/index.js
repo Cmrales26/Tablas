@@ -1,6 +1,7 @@
 window.addEventListener("load", (event) => {
     Listar()
-  }); 
+});
+
 let cuerpotrabal = document.getElementById('tabla-usuario');
 
 let usuario = [
@@ -72,15 +73,16 @@ let pais = document.getElementById("Pais");
 let selector_genero = document.getElementById("Selector-genero"); let genero = selector_genero.elements["Genero"];
 
 const Agregar = () => {
-    if (id.value == "" || nombre.value == "" || apellido.value == "" || user.value == "" || direccion.value == "" || telefono.value == "" || edad.value == "" || pais.value == "Seleccione un país" || pais.value == "" || genero.value == ""){   
+    if (id.value == "" || nombre.value == "" || apellido.value == "" || user.value == "" || direccion.value == "" || telefono.value == "" || edad.value == "" || pais.value == "Seleccione un país" || pais.value == "" || genero.value == "") {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: 'DEBE RELLENAR TODOS LOS VALORES',
             confirmButtonColor: "#6C4784"
-            
-        })
-    }else if(validarExistencia() == false){
+        }
+        )
+        select_faltantes();
+    } else if (validarExistencia() == false) {
         let nuevo = {
             id: id.value,
             nombre: nombre.value,
@@ -95,13 +97,14 @@ const Agregar = () => {
         usuario.push(nuevo);
         Listar();
         limpiar();
-    }else{
+        remove_select()
+    } else {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
             text: `El numero de identificacion ${id.value} ya se encuentra registrado`,
             confirmButtonColor: "#6C4784"
-            
+
         });
         id.value = "";
     }
@@ -110,13 +113,14 @@ const Agregar = () => {
 const validarExistencia = () => {
     for (let i = 0; i < usuario.length; i++) {
         if (id.value == usuario[i].id) {
+            id.classList.add("form-alert");
             return true;
         }
-    }        
+    }
     return false;
 }
 
-const limpiar = () =>{
+const limpiar = () => {
     id.value = "";
     nombre.value = "";
     apellido.value = "";
@@ -125,4 +129,48 @@ const limpiar = () =>{
     telefono.value = "";
     edad.value = "";
     pais.value = "Seleccione un país";
+}
+
+const select_faltantes = () =>{
+    if(id.value == ""){
+        id.classList.add("form-alert")
+    }
+    if(nombre.value == ""){
+        nombre.classList.add("form-alert")
+    }
+    if(apellido.value == ""){
+        apellido.classList.add("form-alert")
+    }
+    if(user.value == ""){
+        user.classList.add("form-alert")
+    }
+    if(direccion.value == ""){
+        direccion.classList.add("form-alert")
+    }
+    if(telefono.value == ""){
+        telefono.classList.add("form-alert")
+    }
+    if(edad.value == ""){
+        edad.classList.add("form-alert")
+    }
+    if(pais.value == "Seleccione un país"){
+        pais.classList.add("form-alert")
+    }
+}
+
+let form = document.querySelector(".lables");
+
+form.addEventListener('click', (event) => {
+    remove_select()
+}) 
+
+const remove_select = () => {
+    id.classList.remove("form-alert")
+    nombre.classList.remove("form-alert")
+    apellido.classList.remove("form-alert")
+    user.classList.remove("form-alert")
+    direccion.classList.remove("form-alert")
+    telefono.classList.remove("form-alert")
+    edad.classList.remove("form-alert")
+    pais.classList.remove("form-alert")
 }

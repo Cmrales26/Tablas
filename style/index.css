@@ -75,6 +75,10 @@ h1{
 .form-check{
     font-size: 16px;
 }
+.form-alert{
+    color: red;
+    border:  1px solid red;
+}
 .form-control:focus, .form-select:focus{
     border-color: transparent;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(108, 71, 132, 0.6);
