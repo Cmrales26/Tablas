@@ -92,7 +92,7 @@ th{
 }
 footer{
     color: white;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-left: 3%;
     position: absolute;
     bottom:0;
