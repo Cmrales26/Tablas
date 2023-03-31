@@ -17,6 +17,17 @@ let usuario = [
         genero: "Masculino",
     },
     {
+        id: 1007176,
+        nombre: "Andrea",
+        apellido: "Dominguez",
+        usuarios: "Adomingu24",
+        direccion: "Calle 3",
+        telefono: 3324587,
+        edad: 20,
+        pais: "Colombia",
+        genero: "Femenino",
+    },
+    {
         id: 1001998,
         nombre: "Diana",
         apellido: "Vidal",
@@ -27,17 +38,6 @@ let usuario = [
         pais: "Colombia",
         genero: "Femenino",
     },
-    {
-        id: 1002045,
-        nombre: "Sharith",
-        apellido: "Blanco",
-        usuarios: "Sblanco10",
-        direccion: "Calle 3",
-        telefono: 3012552,
-        edad: 21,
-        pais: "Colombia",
-        genero: "Femenino",
-    }
 ]
 
 const Listar = () => {
