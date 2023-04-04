@@ -95,6 +95,13 @@ const Agregar = () => {
             genero: genero.value
         }
         usuario.push(nuevo);
+        Swal.fire({
+            icon:'success',
+            title: "👍",
+            text: "Se ha Agregado correctamente",
+            timer: 1500,
+            showConfirmButton: false
+          });
         Listar();
         limpiar();
         remove_select()
