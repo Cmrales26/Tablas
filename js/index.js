@@ -183,6 +183,10 @@ form.addEventListener('click', (event) => {
     remove_select()
 })
 
+const onKeyDown = (event) => {
+  if (event.code === 'Space') event.preventDefault()
+}
+
 const remove_select = () => {
     id.classList.remove("form-alert")
     nombre.classList.remove("form-alert")
