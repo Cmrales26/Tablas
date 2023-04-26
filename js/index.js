@@ -126,6 +126,19 @@ const validarExistencia = () => {
     return false;
 }
 
+var typenumberinvalid = [
+    "-",
+    "+",
+    "e",
+    "."
+  ];
+
+id.addEventListener("keydown", function (event) {
+    if (typenumberinvalid.includes(event.key)) {
+        event.preventDefault();
+    }
+})
+
 const limpiar = () => {
     id.value = "";
     nombre.value = "";
